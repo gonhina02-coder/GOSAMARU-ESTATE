@@ -1,19 +1,214 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import PageVisual from '../components/PageVisual.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-
-const title = '会社概要｜護佐丸エステート';
-const description = '護佐丸エステートの会社概要をご案内します。';
 ---
 
-<BaseLayout title={title} description={description} canonical={`https://www.gosamaru-estate.com/company/`}>
-  <PageVisual src="/images/img/company-mainvisual.png" alt="沖縄の風景" />
+<BaseLayout
+  title="会社概要｜護佐丸エステート"
+  description="護佐丸エステートの会社概要をご紹介します。代表あいさつ、企業理念など、私たちの想いをご紹介します。"
+>
 
-  <section class="page-section">
-    <div class="page-section-inner">
-      <SectionTitle ja="会社概要" en="COMPANY" tag="h1" />
-      <p class="section-text">このページのコンテンツは、現在のHTML原稿をもとに順次組み込めます。</p>
+  <!-- =========================
+       Page Visual
+  ========================== -->
+  <section class="company-visual">
+    <div class="company-visual__image">
+      <img
+        src="/images/company-visual.jpg"
+        alt="沖縄の海と古民家"
+      />
+    </div>
+
+    <div class="company-visual__content">
+      <h1>
+        <span class="company-visual__title">会社概要</span>
+        <span class="company-visual__en">COMPANY</span>
+      </h1>
+
+      <p>
+        護佐丸エステートの想いと、<br />
+        地域とともに歩む私たちの取り組みをご紹介します。
+      </p>
     </div>
   </section>
+
+
+  <!-- =========================
+       Representative
+  ========================== -->
+  <section class="company-message">
+    <div class="company-message__inner">
+
+      <div class="company-message__text">
+
+        <div class="company-heading">
+          <h2>代表あいさつ</h2>
+        </div>
+
+        <h3>
+          人と不動産、地域をつなぎ、<br />
+          未来を育むパートナーでありたい。
+        </h3>
+
+        <p>
+          護佐丸エステートは、沖縄の豊かな自然と文化を大切にしながら、
+          「安心・信頼・誠実」を基本に、地域の皆さまに寄り添う不動産
+          サービスを提供してまいります。
+        </p>
+
+        <p>
+          不動産は単なる「モノ」ではなく、暮らしや想いが詰まった
+          大切な資産です。
+        </p>
+
+        <p>
+          お客様一人ひとりの想いを受け止め、最適なご提案とサポートで、
+          笑顔あふれる未来づくりに貢献していきます。
+        </p>
+
+        <div class="representative-name">
+          <span class="representative-name__position">
+            代表取締役
+          </span>
+
+          <span class="representative-name__ja">
+            新垣 渉
+          </span>
+
+          <span class="representative-name__en">
+            WATARU ARAKAKI
+          </span>
+        </div>
+
+        <div class="representative-signature">
+          Wataru Arakaki
+        </div>
+
+      </div>
+
+      <div class="company-message__image">
+        <img
+          src="/images/representative.jpg"
+          alt="代表取締役 新垣 渉"
+        />
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =========================
+       Philosophy
+  ========================== -->
+  <section class="philosophy">
+
+    <div class="philosophy__inner">
+
+      <div class="section-heading">
+        <h2>企業理念</h2>
+      </div>
+
+      <p class="philosophy__lead">
+        私たちは、地域と共に成長し、信頼される不動産パートナーを目指します。
+      </p>
+
+
+      <div class="philosophy-list">
+
+        <!-- 信頼 -->
+        <article class="philosophy-item">
+
+          <div class="philosophy-item__icon">
+            <img
+              src="/images/icon-trust.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="philosophy-item__content">
+            <h3>信頼</h3>
+
+            <p>
+              お客様との信頼関係を何より大切にし、
+              誠実な対応をお約束します。
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- 価値 -->
+        <article class="philosophy-item">
+
+          <div class="philosophy-item__icon">
+            <img
+              src="/images/icon-value.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="philosophy-item__content">
+            <h3>価値</h3>
+
+            <p>
+              不動産の価値を最大限に引き出し、
+              お客様の資産価値向上に貢献します。
+            </p>
+          </div>
+
+        </article>
+
+
+        <!-- 地域貢献 -->
+        <article class="philosophy-item">
+
+          <div class="philosophy-item__icon">
+            <img
+              src="/images/icon-community.svg"
+              alt=""
+            />
+          </div>
+
+          <div class="philosophy-item__content">
+            <h3>地域貢献</h3>
+
+            <p>
+              地域の発展と暮らしの向上に貢献し、
+              沖縄の未来を共に創っていきます。
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       Contact CTA
+  ========================== -->
+  <section class="company-contact">
+
+    <div class="company-contact__inner">
+
+      <div class="company-contact__icon">
+        <span>✉</span>
+      </div>
+
+      <p>
+        不動産に関するご相談・ご質問など、<br />
+        お気軽にお問い合わせください。
+      </p>
+
+      <a href="/contact/" class="company-contact__button">
+        <span>✉</span>
+        お問い合わせはこちら
+      </a>
+
+    </div>
+
+  </section>
+
 </BaseLayout>

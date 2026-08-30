@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.gosamaru-estate.com/',
+  site: 'https://gonhina02-coder.github.io',
+  base: '/GOSAMARU-ESTATE',
   output: 'static'
 });

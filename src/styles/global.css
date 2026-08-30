@@ -469,6 +469,672 @@ textarea {
 }
 
 /* =========================
+   Company Visual
+========================= */
+
+.company-visual {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.company-visual__image {
+  width: 100%;
+}
+
+.company-visual__image img {
+  display: block;
+  width: 100%;
+  height: 365px;
+  object-fit: cover;
+}
+
+.company-visual__content {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #078fa8;
+}
+
+.company-visual__content h1 {
+  margin: 0 0 20px;
+}
+
+.company-visual__title {
+  display: block;
+  font-family: serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.company-visual__en {
+  display: block;
+  margin-top: 5px;
+  font-size: 15px;
+  letter-spacing: 0.2em;
+}
+
+.company-visual__content p {
+  margin: 0;
+  color: #333;
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+/* =========================
+   Company Message
+========================= */
+
+.company-message {
+  padding: 55px 20px 70px;
+  background: #fff;
+}
+
+.company-message__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 55px;
+  align-items: center;
+}
+
+.company-heading {
+  margin-bottom: 28px;
+}
+
+.company-heading h2 {
+  display: inline-block;
+  margin: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #0db3c8;
+  color: #0db3c8;
+  font-family: serif;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.company-message__text h3 {
+  margin: 0 0 22px;
+  font-family: serif;
+  font-size: 27px;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.company-message__text p {
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.company-message__image {
+  width: 100%;
+}
+
+.company-message__image img {
+  display: block;
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.representative-name {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.representative-name__position {
+  font-size: 12px;
+}
+
+.representative-name__ja {
+  font-family: serif;
+  font-size: 25px;
+}
+
+.representative-name__en {
+  color: #0db3c8;
+  font-size: 10px;
+  letter-spacing: 0.05em;
+}
+
+.representative-signature {
+  margin-top: 0;
+  margin-left: 210px;
+  color: #0db3c8;
+  font-family: cursive;
+  font-size: 27px;
+  font-style: italic;
+}
+
+
+/* =========================
+   Philosophy
+========================= */
+
+.philosophy {
+  padding: 45px 20px 55px;
+  background: #eef9fc;
+}
+
+.philosophy__inner {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #0db3c8;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #0db3c8;
+  font-family: serif;
+  font-size: 28px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.philosophy__lead {
+  margin: 0 0 35px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.philosophy-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.philosophy-item {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.philosophy-item__icon {
+  flex: 0 0 90px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.philosophy-item__icon img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.philosophy-item__content h3 {
+  margin: 0 0 5px;
+  font-family: serif;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.philosophy-item__content p {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   Rent Flow
+========================= */
+
+.rent-flow {
+  padding: 70px 20px 100px;
+  background: #fff;
+}
+
+.rent-flow-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.rent-flow-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.rent-flow-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0 0 25px;
+  color: #0db3c8;
+  font-size: 30px;
+  line-height: 1.3;
+  font-family: serif;
+  white-space: nowrap;
+}
+
+.rent-flow-title::before,
+.rent-flow-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #0db3c8;
+}
+
+.rent-flow-lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+/* Flow */
+
+.rent-flow-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+
+.rent-flow-item {
+  position: relative;
+  min-height: 255px;
+  padding: 22px 15px 20px;
+  background: #f1f9fb;
+  border: 1px solid #9edee8;
+  border-radius: 7px;
+}
+
+/* Number */
+
+.rent-flow-number {
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #3da5c8;
+  color: #fff;
+
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Item title */
+
+.rent-flow-item-title {
+  min-height: 42px;
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Icon */
+
+.rent-flow-icon {
+  height: 100px;
+  margin: 12px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rent-flow-icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* Text */
+
+.rent-flow-item-text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 2.1;
+}
+
+/* CTA */
+
+.rent-flow-cta {
+  max-width: 710px;
+  margin: 80px auto 0;
+  padding: 30px 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  background: #f1f9fb;
+  border-radius: 5px;
+}
+
+.rent-flow-cta-text {
+  flex: 1;
+}
+
+.rent-flow-cta-text h2 {
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #d5dfe1;
+
+  color: #0db3c8;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.rent-flow-cta-text p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.rent-flow-cta-button {
+  width: 310px;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  background: #f5a000;
+  color: #fff;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.rent-flow-cta-button:hover {
+  opacity: 0.8;
+}
+
+.rent-flow-cta-icon {
+  font-size: 18px;
+}
+
+
+/* =========================
+   Rent Flow Mobile
+========================= */
+
+@media screen and (max-width: 767px) {
+
+  .rent-flow {
+    padding: 50px 15px 70px;
+  }
+
+  .rent-flow-heading {
+    margin-bottom: 45px;
+  }
+
+  .rent-flow-title {
+    gap: 12px;
+    font-size: 22px;
+  }
+
+  .rent-flow-lead {
+    font-size: 12px;
+  }
+
+  .rent-flow-list {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .rent-flow-item {
+    min-height: auto;
+    padding: 25px 20px 25px;
+  }
+
+  .rent-flow-item-title {
+    min-height: auto;
+    font-size: 15px;
+  }
+
+  .rent-flow-icon {
+    height: 90px;
+  }
+
+  .rent-flow-item-text {
+    font-size: 12px;
+  }
+
+  .rent-flow-cta {
+    margin-top: 55px;
+    padding: 25px 20px;
+
+    display: block;
+  }
+
+  .rent-flow-cta-text h2 {
+    font-size: 18px;
+  }
+
+  .rent-flow-cta-text p {
+    font-size: 12px;
+  }
+
+  .rent-flow-cta-button {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 20px;
+
+    font-size: 16px;
+  }
+}
+
+/* =========================
+   Company Contact
+========================= */
+
+.company-contact {
+  padding: 25px 20px 45px;
+  background: #fff;
+}
+
+.company-contact__inner {
+  max-width: 760px;
+  min-height: 105px;
+  margin: 0 auto;
+  padding: 18px 30px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #eef9fc;
+  border-radius: 4px;
+}
+
+.company-contact__icon {
+  flex: 0 0 70px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.company-contact__icon span {
+  color: #0db3c8;
+  font-size: 25px;
+}
+
+.company-contact__inner p {
+  flex: 1;
+  margin: 0;
+  color: #0db3c8;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.company-contact__button {
+  width: 290px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #f5a000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-family: serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.company-contact__button:hover {
+  opacity: 0.8;
+}
+
+
+/* =========================
+   Company Mobile
+========================= */
+
+@media screen and (max-width: 767px) {
+
+  .company-visual__image img {
+    height: 300px;
+  }
+
+  .company-visual__content {
+    left: 6%;
+  }
+
+  .company-visual__title {
+    font-size: 35px;
+  }
+
+  .company-visual__en {
+    font-size: 12px;
+  }
+
+  .company-visual__content p {
+    font-size: 11px;
+  }
+
+  .company-message {
+    padding: 45px 20px 55px;
+  }
+
+  .company-message__inner {
+    display: block;
+  }
+
+  .company-message__text {
+    margin-bottom: 35px;
+  }
+
+  .company-message__text h3 {
+    font-size: 22px;
+  }
+
+  .company-message__text p {
+    font-size: 12px;
+  }
+
+  .company-message__image img {
+    height: auto;
+  }
+
+  .representative-name {
+    flex-wrap: wrap;
+  }
+
+  .representative-signature {
+    margin-left: 120px;
+  }
+
+  .philosophy {
+    padding: 40px 20px;
+  }
+
+  .section-heading {
+    gap: 12px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .philosophy__lead {
+    font-size: 11px;
+  }
+
+  .philosophy-list {
+    display: block;
+  }
+
+  .philosophy-item {
+    margin-bottom: 25px;
+  }
+
+  .philosophy-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .company-contact__inner {
+    display: block;
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .company-contact__icon {
+    margin: 0 auto 15px;
+  }
+
+  .company-contact__inner p {
+    margin-bottom: 20px;
+  }
+
+  .company-contact__button {
+    width: 100%;
+  }
+}
+/* =========================
    Mobile
 ========================= */
 

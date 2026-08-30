@@ -1,19 +1,178 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageVisual from '../components/PageVisual.astro';
-import SectionTitle from '../components/SectionTitle.astro';
-
-const title = '売る｜護佐丸エステート';
-const description = '沖縄の不動産売却をサポートする護佐丸エステート。';
 ---
 
-<BaseLayout title={title} description={description} canonical={`https://www.gosamaru-estate.com/sell/`}>
-  <PageVisual src="/images/img/sell-mainvisual.png" alt="沖縄の風景" />
+<BaseLayout
+  title="売る｜護佐丸エステート"
+  description="沖縄の不動産売却をサポートする護佐丸エステート。査定から販売活動、契約、引き渡しまでしっかりサポートいたします。"
+>
 
-  <section class="page-section">
-    <div class="page-section-inner">
-      <SectionTitle ja="売る" en="SELL" tag="h1" />
-      <p class="section-text">このページのコンテンツは、現在のHTML原稿をもとに順次組み込めます。</p>
+  <!-- ページビジュアル -->
+  <PageVisual
+    image="/images/sell.jpg"
+    alt="沖縄の古民家と海"
+  />
+
+  <!-- 売却までの流れ -->
+  <section class="flow">
+    <div class="flow-inner">
+
+      <div class="flow-heading">
+        <h1 class="section-title">
+          <span class="section-title__ja">売却の流れ</span>
+        </h1>
+
+        <p class="flow-lead">
+          ご相談から売却・引き渡しまで、しっかりサポートいたします。
+        </p>
+      </div>
+
+      <ol class="flow-steps">
+
+        <li class="flow-step">
+          <span class="flow-step__number">1</span>
+
+          <h2 class="flow-step__title">
+            ご相談・査定依頼
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-consultation.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            売却のご要望やご不安をお聞かせください。
+          </p>
+        </li>
+
+        <li class="flow-step">
+          <span class="flow-step__number">2</span>
+
+          <h2 class="flow-step__title">
+            現地調査・査定
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-house.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            物件の状況や周辺環境を調査し、
+            適正な価格をご提案します。
+          </p>
+        </li>
+
+        <li class="flow-step">
+          <span class="flow-step__number">3</span>
+
+          <h2 class="flow-step__title">
+            媒介契約の締結
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-document.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            販売活動をお任せいただくための
+            契約を結びます。
+            <br />
+            （専任・専属専任・一般）
+          </p>
+        </li>
+
+        <li class="flow-step">
+          <span class="flow-step__number">4</span>
+
+          <h2 class="flow-step__title">
+            売却活動・販売開始
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-megaphone.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            広告掲載や購入希望者へのご紹介など、
+            積極的に販売活動を行います。
+          </p>
+        </li>
+
+        <li class="flow-step">
+          <span class="flow-step__number">5</span>
+
+          <h2 class="flow-step__title">
+            売買契約の締結
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-handshake.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            購入希望者と条件が合えば、
+            売買契約を締結します。
+          </p>
+        </li>
+
+        <li class="flow-step">
+          <span class="flow-step__number">6</span>
+
+          <h2 class="flow-step__title">
+            引き渡し・決済
+          </h2>
+
+          <div class="flow-step__icon">
+            <img
+              src="/images/icon-key.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="flow-step__text">
+            現代金の受領と物件の引き渡しを行い、
+            売却が完了します。
+          </p>
+        </li>
+
+      </ol>
+
+      <!-- CTA -->
+      <div class="flow-cta">
+
+        <div class="flow-cta__text">
+          <h2>査定・ご相談はこちら</h2>
+
+          <p>
+            「まずは価格だけ知りたい」という方も
+            お気軽にご連絡ください。
+          </p>
+        </div>
+
+        <a href="/contact/" class="button button--cta">
+          <span>査定を依頼する</span>
+          <span class="button-arrow">→</span>
+        </a>
+
+      </div>
+
     </div>
   </section>
+
 </BaseLayout>
