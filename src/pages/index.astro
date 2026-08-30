@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+const title = '沖縄の不動産なら護佐丸エステート｜売買・賃貸を地域密着でサポート';
+const description = '沖縄の不動産売買・賃貸なら護佐丸エステート。地域に密着した不動産会社として、物件探しから購入・売却・賃貸まで安心してサポートいたします。';
+---
+
+<BaseLayout title={title} description={description} canonical="https://www.gosamaru-estate.com/">
+  <section class="hero">
+    <div class="main-visual">
+      <img src="/images/img/home-mainvisual.png" alt="沖縄の海と青空" class="main-visual-image" />
+      <div class="main-visual-content">
+        <h1>
+          沖縄の未来と暮らしを、<br />
+          不動産の力でつなぐ。
+        </h1>
+        <p class="main-visual-text">
+          沖縄本島中部エリアを中心に、地域に根差した不動産サービスで<br />
+          お客様の理想の暮らしをサポートします。
+        </p>
+        <p class="main-visual-subtitle">
+          GOSAMARU
+          <span>ESTATE COMPANHY</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="real-estate-menu">
+      <div class="real-estate-menu-inner">
+        {[
+          ['買う', 'home-buy.jpg', '戸建て・マンション', '土地を探す'],
+          ['借りる', 'home-rent.jpg', '賃貸物件を', '探す'],
+          ['売る', 'home-sell.jpg', '不動産売却を', 'ご検討の方へ'],
+          ['貸す', 'home-lease.jpg', '不動産を貸したい', 'オーナー様へ']
+        ].map(([label, image, line1, line2], index) => (
+          <div class="real-estate-card">
+            <img src={`/images/img/${image}`} alt={`不動産を${label}`} />
+            <div class="real-estate-card-overlay"></div>
+            <div class="real-estate-card-content">
+              <h2>{label}</h2>
+              <p class="section-text">
+                {line1}<br />{line2}
+              </p>
+            </div>
+            <a href={index === 0 || index === 1 ? '#' : '#'} class="site-button">
+              {index === 0 || index === 1 ? 'うちなーらいふへ' : '詳しく見る'}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="area">
+    <div class="area-inner">
+      <div class="area-heading">
+        <img src="/images/icon/ico-area.svg" alt="" />
+        <SectionTitle ja="対応エリア" en="AREA" />
+      </div>
+      <div class="area-content">
+        <p class="section-text">沖縄本島中部エリアを中心に、周辺エリアの不動産情報に精通しています。</p>
+        <ul class="area-list">
+          <li>沖縄市</li>
+          <li>うるま市</li>
+          <li>宜野湾市</li>
+          <li>北中城村</li>
+          <li>中城村</li>
+          <li>西原町</li>
+        </ul>
+        <p class="section-text">その他エリアも対応可能です。お気軽にご相談ください。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="reason">
+    <div class="reason-inner">
+      <SectionTitle ja="選ばれる理由" en="REASON" />
+      <div class="reason-list">
+        <div class="reason-item">
+          <img src="/images/icon/ico-area.svg" alt="" />
+          <h3>地域密着の情報力</h3>
+          <p class="section-text">本島中部エリアを中心に<br />地域情報に精通、最新の<br />物件情報をお届けします。</p>
+        </div>
+        <div class="reason-item">
+          <img src="/images/icon/ico-consultation.svg" alt="" />
+          <h3>丁寧なヒアリング</h3>
+          <p class="section-text">お客様のご要望やライフスタイルに<br />寄り添い、丁寧なご対応を<br />いたします。</p>
+        </div>
+        <div class="reason-item">
+          <img src="/images/icon/ico-certificate.svg" alt="" />
+          <h3>わかりやすい説明</h3>
+          <p class="section-text">専門用語にを使わず、契約内容や<br />手続きについて丁寧に<br />ご説明します。</p>
+        </div>
+        <div class="reason-item">
+          <img src="/images/icon/ico-support-care.svg" alt="" />
+          <h3>購入後もサポート</h3>
+          <p class="section-text">ご契約後も安心していただける<br />アフターフォローまで<br />しっかりと対応いたします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-access">
+    <div class="about">
+      <div class="about-inner">
+        <div class="about-content">
+          <SectionTitle ja="会社紹介" en="ABOUT US" />
+          <p class="section-text">
+            護佐丸エステートは、本島中部エリアを中心に、<br />
+            不動産の売買・賃貸・管理を行う地域密着の<br />
+            不動産会社です。<br />
+            お客様の大切な資産を安心して任せていただける<br />
+            パートナーとして誠実な対応をお約束します。
+          </p>
+          <a href="/company/" class="button button--detail">詳しく見る</a>
+        </div>
+        <img src="/images/img/home-about.jpg" alt="護佐丸エステート" class="about-image" />
+      </div>
+    </div>
+
+    <div class="access">
+      <div class="access-inner">
+        <div class="access-content">
+          <SectionTitle ja="アクセス" en="ACCESS" />
+          <ul class="access-address">
+            <li>〒904-0003</li>
+            <li>沖縄市住吉1-2-19 101号</li>
+          </ul>
+          <ul class="access-info">
+            <li><img src="/images/icon/ico-tel.svg" alt="" /><p>098-955-1751</p></li>
+            <li><img src="/images/icon/ico-mail.svg" alt="" /><p>gosamaruestate@gmail.com</p></li>
+            <li><img src="/images/icon/ico-clock.svg" alt="" /><p>営業時間 9:00-18:00</p></li>
+            <li><img src="/images/icon/ico-calendar.svg" alt="" /><p>定休日 土・日曜日</p></li>
+          </ul>
+        </div>
+        <div class="access-map">
+          <img src="/images/img/home-map.jpg" alt="護佐丸エステート周辺地図" />
+          <a href="#" class="button button--map">Googleマップで見る</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <SectionTitle ja="よくあるご質問" en="FAQ" />
+    <div class="accordion-section">
+      <div class="accordion-group">
+        {['相談や査定は無料ですか？', '住宅ローンの相談も可能ですか？', '売却をお願いした場合、どのくらいで売れますか？'].map((question) => (
+          <details class="accordion">
+            <summary class="accordion__title">
+              <span class="accordion__text">{question}</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__content"></div>
+          </details>
+        ))}
+      </div>
+      <div class="accordion-group">
+        {['物件の見学はできますか？', '賃貸物件も紹介してもらえますか？', '遠方に住んでいますが、相談できますか？'].map((question) => (
+          <details class="accordion">
+            <summary class="accordion__title">
+              <span class="accordion__text">{question}</span>
+              <span class="accordion__icon" aria-hidden="true"></span>
+            </summary>
+            <div class="accordion__content"></div>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="contact-inner">
+      <div class="contact-content">
+        <p class="section-text">不動産に関するご相談・お問い合せはこちら</p>
+        <div class="contact-features">
+          <p class="contact-feature"><span class="contact-feature__icon"></span><span class="contact-feature__text">秘密厳守</span></p>
+          <p class="contact-feature"><span class="contact-feature__icon"></span><span class="contact-feature__text">迅速対応</span></p>
+        </div>
+      </div>
+      <div class="contact-action">
+        <img src="/images/img/home-contact.jpg" alt="お問い合わせ" />
+        <a href="/contact/" class="button button--contact">お問い合わせはこちら</a>
+      </div>
+    </div>
+  </section>
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'RealEstateAgent',
+    name: '護佐丸エステート',
+    url: 'https://www.gosamaru-estate.com/',
+    description: '沖縄の不動産売買・賃貸を地域密着でサポートする護佐丸エステートです。',
+    areaServed: { '@type': 'Place', name: '沖縄県' }
+  })} />
+</BaseLayout>

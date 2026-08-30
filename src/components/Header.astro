@@ -1,0 +1,47 @@
+---
+const navItems = [
+  { label: '買う', href: '/buy/' },
+  { label: '売る', href: '/sell/' },
+  { label: '借りる', href: '/rent/' },
+  { label: '貸す', href: '/lease/' },
+  { label: '会社概要', href: '/company/' },
+  { label: 'お問い合わせ', href: '/contact/' }
+];
+
+const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="header">
+  <div class="header-inner">
+    <a href="/" class="logo">護佐丸エステート</a>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <ul class="nav-list">
+        {navItems.map((item) => {
+          const itemPath = item.href.replace(/\/$/, '');
+          const isCurrent = currentPath === itemPath;
+
+          return (
+            <li>
+              <a href={item.href} aria-current={isCurrent ? 'page' : undefined}>
+                {item.label}
+              </a>
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+
+    <div class="header-contact">
+      <a href="tel:098-943-2035" class="header-tel">
+        <span class="tel-number">098-943-2035</span>
+        <span class="tel-hours">受付時間 9:00-18:00 / 水曜定休</span>
+      </a>
+
+      <a href="/contact/" class="header-mail">
+        <img src="/images/icon/ico-mail.svg" alt="" />
+        <span>お問い合わせ</span>
+      </a>
+    </div>
+  </div>
+</header>

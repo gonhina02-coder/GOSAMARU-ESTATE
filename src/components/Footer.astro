@@ -1,0 +1,37 @@
+---
+const navItems = [
+  { label: '買う', href: '/buy/' },
+  { label: '売る', href: '/sell/' },
+  { label: '借りる', href: '/rent/' },
+  { label: '貸す', href: '/lease/' },
+  { label: '会社概要', href: '/company/' },
+  { label: 'お問い合わせ', href: '/contact/' }
+];
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-info">
+      <a href="/" class="footer-logo">
+        <img src="/images/logo.png" alt="GOSAMARU ESTATE" />
+      </a>
+
+      <address class="footer-address">
+        〒904-0003<br />
+        沖縄市住吉1-2-19 101号
+      </address>
+    </div>
+
+    <div class="footer-right">
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+      </nav>
+
+      <p class="copyright">© GOSAMARU ESTATE All Right Reserved.</p>
+    </div>
+
+    <a href="#" class="page-top" aria-label="ページトップへ戻る">
+      <span></span>
+    </a>
+  </div>
+</footer>

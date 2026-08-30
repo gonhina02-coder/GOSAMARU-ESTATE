@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageVisual from '../components/PageVisual.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+
+const title = '貸す｜護佐丸エステート';
+const description = '不動産を貸したいオーナー様をサポートする護佐丸エステート。';
+---
+
+<BaseLayout title={title} description={description} canonical={`https://www.gosamaru-estate.com/lease/`}>
+  <PageVisual src="/images/img/lease-mainvisual.png" alt="沖縄の風景" />
+
+  <section class="page-section">
+    <div class="page-section-inner">
+      <SectionTitle ja="貸す" en="LEASE" tag="h1" />
+      <p class="section-text">このページのコンテンツは、現在のHTML原稿をもとに順次組み込めます。</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,78 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionTitle from '../components/SectionTitle.astro';
+import PageVisual from '../components/PageVisual.astro';
+
+const title = 'お問い合わせ｜護佐丸エステート';
+const description = '護佐丸エステートへのお問い合わせはこちら。不動産の購入・売却・賃貸・管理についてお気軽にご相談ください。';
+---
+
+<BaseLayout title={title} description={description} canonical="https://www.gosamaru-estate.com/contact/">
+  <PageVisual src="/images/img/contact-mainvisual.png" alt="沖縄の風景" />
+
+  <section class="contact contact-page">
+    <div class="contact-inner">
+      <div class="contact-heading">
+        <SectionTitle ja="お問い合わせフォーム" tag="h1" />
+        <p class="contact-lead">
+          下記フォームに必要事項をご入力のうえ、送信してください。<br />
+          内容を確認のうえ、担当者より折り返しご連絡いたします。
+        </p>
+      </div>
+
+      <form class="contact-form" action="/contact-confirm.php" method="post">
+        <div class="form-group">
+          <label for="name" class="form-label"><span class="form-label__text">お名前</span><span class="form-required">必須</span></label>
+          <div class="form-field"><input type="text" id="name" name="name" autocomplete="name" required /></div>
+        </div>
+
+        <div class="form-group">
+          <label for="kana" class="form-label"><span class="form-label__text">フリガナ</span><span class="form-required">必須</span></label>
+          <div class="form-field"><input type="text" id="kana" name="kana" required /></div>
+        </div>
+
+        <div class="form-group">
+          <label for="email" class="form-label"><span class="form-label__text">メールアドレス</span><span class="form-required">必須</span></label>
+          <div class="form-field"><input type="email" id="email" name="email" autocomplete="email" required /></div>
+        </div>
+
+        <div class="form-group">
+          <label for="tel" class="form-label"><span class="form-label__text">電話番号</span><span class="form-required">必須</span></label>
+          <div class="form-field"><input type="tel" id="tel" name="tel" autocomplete="tel" required /></div>
+        </div>
+
+        <fieldset class="form-group form-group--fieldset">
+          <legend class="form-label"><span class="form-label__text">お問合せ種別</span><span class="form-required">必須</span></legend>
+          <div class="form-field form-field--choice">
+            {['買いたい', '売りたい', '借りたい', '貸したい', 'その他'].map((value) => (
+              <label class="form-choice"><input type="checkbox" name="type[]" value={value} /><span>{value}</span></label>
+            ))}
+          </div>
+        </fieldset>
+
+        <fieldset class="form-group form-group--fieldset">
+          <legend class="form-label"><span class="form-label__text">ご希望の連絡方法</span><span class="form-required">必須</span></legend>
+          <div class="form-field form-field--choice">
+            {['電話', 'メール', 'どちらでも可'].map((value, index) => (
+              <label class="form-choice"><input type="radio" name="contact_method" value={value} required={index === 0} /><span>{value}</span></label>
+            ))}
+          </div>
+        </fieldset>
+
+        <div class="form-group form-group--textarea">
+          <label for="message" class="form-label"><span class="form-label__text">お問合せ内容</span><span class="form-required">必須</span></label>
+          <div class="form-field"><textarea id="message" name="message" rows="6" required></textarea></div>
+        </div>
+
+        <p class="privacy-text">※ご入力いただいた個人情報は、お問い合わせ対応のために利用し、その他の目的には利用いたしません。</p>
+
+        <div class="form-submit">
+          <button type="submit" class="button button--submit">
+            <span>入力内容を送信する</span>
+            <span class="button-arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+</BaseLayout>

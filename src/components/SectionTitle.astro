@@ -1,0 +1,15 @@
+---
+interface Props {
+  ja: string;
+  en?: string;
+  tag?: 'h1' | 'h2';
+}
+
+const { ja, en, tag = 'h2' } = Astro.props;
+const HeadingTag = tag;
+---
+
+<HeadingTag class="section-title">
+  <span class="section-title__ja">{ja}</span>
+  {en && <span class="section-title__en">{en}</span>}
+</HeadingTag>
