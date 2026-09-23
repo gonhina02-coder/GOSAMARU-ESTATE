@@ -146,8 +146,8 @@ textarea {
 }
 
 .header-mail {
-  width: 50px;
-  min-height: 50px;
+  width: 60px;
+  min-height: 60px;
   padding: 5px;
   display: flex;
   flex-direction: column;
@@ -179,6 +179,8 @@ textarea {
 .page-visual img {
   display: block;
   width: 100%;
+  height: 450px;
+  object-fit: cover;
 }
 
 /* =========================
@@ -472,23 +474,6 @@ textarea {
    Company Visual
 ========================= */
 
-.company-visual {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.company-visual__image {
-  width: 100%;
-}
-
-.company-visual__image img {
-  display: block;
-  width: 100%;
-  height: 365px;
-  object-fit: cover;
-}
-
 .company-visual__content {
   position: absolute;
   top: 50%;
@@ -501,26 +486,556 @@ textarea {
   margin: 0 0 20px;
 }
 
-.company-visual__title {
-  display: block;
-  font-family: serif;
-  font-size: 48px;
-  font-weight: 500;
-  line-height: 1.3;
-}
-
-.company-visual__en {
-  display: block;
-  margin-top: 5px;
-  font-size: 15px;
-  letter-spacing: 0.2em;
-}
-
 .company-visual__content p {
   margin: 0;
   color: #333;
   font-size: 14px;
   line-height: 2;
+}
+
+/* ========================================
+   Company Heading
+======================================== */
+
+.company-heading-area {
+  background: linear-gradient(
+    135deg,
+    #f4fbfd 0%,
+    #e8f5fa 100%
+  );
+  padding: 58px 20px 62px;
+  text-align: center;
+}
+
+.company-heading-area__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.company-heading-area h1 {
+  margin: 0;
+}
+
+.company-heading-area__title {
+  display: block;
+  color: #00a9cf;
+  font-size: 42px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+.company-heading-area__line {
+  display: block;
+  width: 38px;
+  height: 2px;
+  background: #00a9cf;
+  margin: 18px auto 22px;
+}
+
+.company-heading-area p {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+
+/* ========================================
+   Representative
+======================================== */
+
+.company-message {
+  background: #fff;
+  padding: 80px 20px;
+}
+
+.company-message__inner {
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 70px;
+  align-items: center;
+}
+
+.company-message__text {
+  min-width: 0;
+}
+
+
+/* 見出し */
+
+.company-heading {
+  margin-bottom: 28px;
+}
+
+.company-heading h2 {
+  position: relative;
+  display: inline-block;
+
+  margin: 0;
+  padding-bottom: 13px;
+
+  color: #00a9cf;
+  font-size: 28px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.company-heading h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 28px;
+  height: 2px;
+
+  background: #00a9cf;
+}
+
+
+/* 代表メッセージ */
+
+.company-message__text > h3 {
+  margin: 0 0 28px;
+
+  color: #1f3442;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+
+.company-message__text > p {
+  margin: 0 0 14px;
+
+  color: #444;
+  font-size: 14px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+}
+
+
+/* 代表者名 */
+
+.representative-name {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  margin-top: 30px;
+}
+
+.representative-name__position {
+  color: #444;
+  font-size: 13px;
+}
+
+.representative-name__ja {
+  color: #222;
+  font-family: serif;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.representative-name__en {
+  color: #00a9cf;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+
+
+/* サイン */
+
+.representative-signature {
+  margin-top: 8px;
+  margin-left: 180px;
+
+  color: #00b4dc;
+  font-family: cursive;
+  font-size: 30px;
+  font-style: italic;
+}
+
+
+/* 代表写真 */
+
+.company-message__image {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.company-message__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* ========================================
+   Philosophy
+======================================== */
+
+.philosophy {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(232, 247, 251, 0.95),
+      rgba(244, 251, 253, 0.95)
+    );
+
+  padding: 70px 20px 75px;
+}
+
+.philosophy__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+/* セクションタイトル */
+
+.philosophy .section-heading {
+  text-align: center;
+}
+
+.philosophy .section-heading h2 {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+  padding-bottom: 14px;
+
+  color: #00a9cf;
+  font-size: 32px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.philosophy .section-heading h2::after {
+  content: "";
+
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+
+  width: 32px;
+  height: 2px;
+
+  background: #00a9cf;
+  transform: translateX(-50%);
+}
+
+
+.philosophy__lead {
+  margin: 25px 0 45px;
+
+  text-align: center;
+
+  color: #333;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* 理念3つ */
+
+.philosophy-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+
+.philosophy-item {
+  padding: 0 35px;
+
+  text-align: center;
+}
+
+.philosophy-item + .philosophy-item {
+  border-left: 1px solid rgba(0, 169, 207, 0.15);
+}
+
+
+/* アイコン */
+
+.philosophy-item__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 90px;
+  height: 90px;
+
+  margin: 0 auto 18px;
+
+  background: #fff;
+  border-radius: 50%;
+}
+
+.philosophy-item__icon img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+}
+
+
+/* 理念タイトル */
+
+.philosophy-item__content h3 {
+  margin: 0 0 12px;
+
+  color: #1f3442;
+  font-family: serif;
+  font-size: 23px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+
+/* 理念文章 */
+
+.philosophy-item__content p {
+  margin: 0;
+
+  color: #444;
+  font-size: 13px;
+  line-height: 2;
+  letter-spacing: 0.03em;
+}
+
+
+/* ========================================
+   Contact CTA
+======================================== */
+
+.company-contact {
+  padding: 24px 20px 55px;
+  background: #fff;
+}
+
+.company-contact__inner {
+  max-width: 800px;
+  min-height: 100px;
+
+  margin: 0 auto;
+  padding: 20px 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 25px;
+
+  background: #eef9fc;
+  border-radius: 5px;
+}
+
+
+/* メールアイコン */
+
+.company-contact__icon {
+  flex: 0 0 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 70px;
+  height: 70px;
+
+  background: #fff;
+  border-radius: 50%;
+}
+
+.company-contact__icon span {
+  color: #00a9cf;
+  font-size: 28px;
+}
+
+
+/* CTA文章 */
+
+.company-contact__inner p {
+  flex: 1;
+
+  margin: 0;
+
+  color: #009fc4;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+
+/* CTAボタン */
+
+.company-contact__button {
+  flex: 0 0 280px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  min-height: 58px;
+
+  padding: 0 20px;
+
+  background: #f5a000;
+  color: #fff;
+
+  border-radius: 4px;
+
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.company-contact__button:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+}
+
+
+/* ========================================
+   Company Responsive
+======================================== */
+
+@media (max-width: 768px) {
+
+  /* Company Heading */
+
+  .company-heading-area {
+    padding: 45px 20px 48px;
+  }
+
+  .company-heading-area__title {
+    font-size: 32px;
+  }
+
+  .company-heading-area p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+
+  /* Representative */
+
+  .company-message {
+    padding: 55px 20px;
+  }
+
+  .company-message__inner {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 40px;
+
+    max-width: 560px;
+  }
+
+  .company-message__image {
+    width: min(100%, 360px);
+  }
+
+  .company-heading {
+    margin-bottom: 22px;
+  }
+
+  .company-heading h2 {
+    font-size: 24px;
+  }
+
+  .company-message__text > h3 {
+    font-size: 22px;
+    line-height: 1.7;
+  }
+
+  .company-message__text > p {
+    font-size: 13px;
+  }
+
+  .representative-name__ja {
+    font-size: 24px;
+  }
+
+  .representative-signature {
+    margin-left: 100px;
+    font-size: 25px;
+  }
+
+
+  /* Philosophy */
+
+  .philosophy {
+    padding: 55px 20px;
+  }
+
+  .philosophy .section-heading h2 {
+    font-size: 28px;
+  }
+
+  .philosophy__lead {
+    font-size: 13px;
+    margin-bottom: 35px;
+  }
+
+  .philosophy-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .philosophy-item {
+    padding: 0;
+  }
+
+  .philosophy-item + .philosophy-item {
+    padding-top: 30px;
+    border-left: none;
+    border-top: 1px solid rgba(0, 169, 207, 0.15);
+  }
+
+
+  /* Contact */
+
+  .company-contact {
+    padding: 20px 15px 45px;
+  }
+
+  .company-contact__inner {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+
+    padding: 25px 20px;
+    text-align: center;
+  }
+
+  .company-contact__icon {
+    width: 60px;
+    height: 60px;
+    flex-basis: 60px;
+  }
+
+  .company-contact__inner p {
+    font-size: 13px;
+  }
+
+  .company-contact__button {
+    width: 100%;
+    flex-basis: auto;
+  }
+
 }
 
 
@@ -550,7 +1065,6 @@ textarea {
   display: inline-block;
   margin: 0;
   padding-bottom: 8px;
-  border-bottom: 1px solid #0db3c8;
   color: #0db3c8;
   font-family: serif;
   font-size: 24px;
@@ -996,9 +1510,8 @@ textarea {
   justify-content: center;
 }
 
-.company-contact__icon span {
-  color: #0db3c8;
-  font-size: 25px;
+.company-contact__icon img {
+  width: 25px;
 }
 
 .company-contact__inner p {
@@ -1035,22 +1548,6 @@ textarea {
 ========================= */
 
 @media screen and (max-width: 767px) {
-
-  .company-visual__image img {
-    height: 300px;
-  }
-
-  .company-visual__content {
-    left: 6%;
-  }
-
-  .company-visual__title {
-    font-size: 35px;
-  }
-
-  .company-visual__en {
-    font-size: 12px;
-  }
 
   .company-visual__content p {
     font-size: 11px;
@@ -1251,3 +1748,1411 @@ textarea {
     padding-right: 40px;
   }
 }
+/* =========================================================
+   HOME
+========================================================= */
+
+/* =========================
+   Hero / Main Visual
+========================= */
+
+.hero {
+  width: 100%;
+}
+
+.main-visual {
+  position: relative;
+  width: 100%;
+  height: 560px;
+  overflow: hidden;
+}
+
+.main-visual-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.main-visual-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(1200px, calc(100% - 40px));
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.main-visual-content h1 {
+  margin: 0 0 18px;
+  color: #111;
+  font-family: serif;
+  font-size: clamp(32px, 3.2vw, 52px);
+  font-weight: 600;
+  line-height: 1.55;
+  letter-spacing: 0.08em;
+}
+
+.main-visual-text {
+  margin: 0;
+  color: #222;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+}
+
+.main-visual-subtitle {
+  margin: 10px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(70px, 10vw, 145px);
+  line-height: 0.95;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.main-visual-subtitle span {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================
+   Real Estate Menu
+========================= */
+
+.real-estate-menu {
+  position: relative;
+  z-index: 2;
+  margin-top: -72px;
+  padding: 0 20px;
+}
+
+.real-estate-menu-inner {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.real-estate-card {
+  position: relative;
+  min-height: 215px;
+  overflow: hidden;
+  border-radius: 7px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.real-estate-card > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.real-estate-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+  90deg,
+  #01A1D9 0%,
+  #02A5DB 38%,
+  rgba(2, 165, 219, 0.5) 60%,
+  rgba(98, 176, 236, 0) 100%
+);
+  border: 5px solid #01A1D9;
+}
+.real-estate-card:nth-child(2) .real-estate-card-overlay {
+  background: linear-gradient(
+  90deg,
+  #35B9CE 0%,
+  #34B7CD 38%,
+  rgba(52, 183, 204, 0.5) 60%,
+  rgba(22, 200, 183, 0) 100%
+);
+  border: 5px solid #35B9CE;
+}
+
+.real-estate-card:nth-child(3) .real-estate-card-overlay,
+.real-estate-card:nth-child(4) .real-estate-card-overlay {
+  background: linear-gradient(
+  90deg,
+  #F59E0B 0%,
+  #F59E0B 38%,
+  rgba(245, 158, 11, 0.5) 60%,
+  rgba(245, 158, 11, 0) 100%
+);
+  border: 5px solid #F59E0B;
+}
+
+.real-estate-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 45px 18px 0;
+  color: #fff;
+}
+
+.real-estate-card-content h2 {
+  margin: 0 0 7px;
+  font-family: serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* .real-estate-card-content h2::before {
+  content: "";
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  margin-right: 8px;
+  vertical-align: -5px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+} */
+
+.real-estate-card-content .section-text {
+  color: #fff;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.real-estate-card .site-button {
+  position: absolute;
+  width: 70%;
+  right: 18px;
+  bottom: 14px;
+  left: 18px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 30px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background: #fff;
+  color: #0db3c8;
+  font-size: 11px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.real-estate-card:nth-child(3) .site-button,
+.real-estate-card:nth-child(4) .site-button {
+  color: #f39a00;
+}
+
+.real-estate-card .site-button::after,
+.button--cta::after,
+.rent-flow-cta-button::after,
+.company-contact__button::after,
+.button--submit::after {
+  content: "›";
+  margin-left: 6px;
+  font-size: 15px;
+  line-height: 1;
+}
+
+
+/* =========================
+   Area
+========================= */
+
+.area {
+  padding: 35px 20px 25px;
+}
+
+.area-inner {
+  width: min(1140px, 100%);
+  min-height: 110px;
+  margin: 0 auto;
+  padding: 22px 40px;
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  border-radius: 4px;
+  background: #edf8fc;
+}
+
+.area-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-width: 180px;
+}
+
+.area-heading img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+}
+
+.area-heading .section-title__ja {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.area-heading .section-title__en {
+  color: #0db3c8;
+  font-size: 10px;
+}
+
+.area-content {
+  flex: 1;
+}
+
+.area-content > .section-text:first-child {
+  margin-bottom: 10px;
+}
+
+.area-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px 10px;
+  margin-bottom: 5px;
+}
+
+.area-list li {
+  padding: 2px 16px;
+  border: 1px solid #0db3c8;
+  border-radius: 20px;
+  color: #0db3c8;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.area-content > .section-text:last-child {
+  font-size: 9px;
+  color: #666;
+}
+
+
+/* =========================
+   Reason
+========================= */
+
+.reason {
+  padding: 30px 20px 50px;
+}
+
+.reason-inner {
+  width: min(1140px, 100%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 25px;
+  align-items: center;
+}
+
+.reason-inner > .section-title {
+  align-self: center;
+}
+
+.reason-inner .section-title__ja {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.reason-inner .section-title__en {
+  color: #0db3c8;
+  font-size: 10px;
+}
+
+.reason-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.reason-item {
+  min-height: 145px;
+  padding: 0 20px;
+  text-align: center;
+  border-left: 1px dotted #0db3c8;
+}
+
+.reason-item:last-child {
+  border-right: 1px dotted #0db3c8;
+}
+
+.reason-item img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 8px;
+  object-fit: contain;
+}
+
+.reason-item h3 {
+  margin: 0 0 8px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.reason-item .section-text {
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   About / Access
+========================= */
+
+.about-access {
+  width: min(1140px, calc(100% - 40px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.about,
+.access {
+  min-width: 0;
+  background: #edf8fc;
+}
+
+.about-inner,
+.access-inner {
+  min-height: 270px;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1fr 42%;
+}
+
+.about-content {
+  padding: 30px 25px;
+}
+
+.about-content .section-title__ja,
+.access-content .section-title__ja {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.about-content .section-title__en,
+.access-content .section-title__en {
+  color: #0db3c8;
+  font-size: 10px;
+}
+
+.about-content .section-text {
+  margin: 18px 0;
+  font-size: 10px;
+  line-height: 2;
+}
+
+.about-image {
+  display: block;
+  margin: 25px 0 0;
+  width: 90%;
+  height: 75%;
+  object-fit: cover;
+}
+
+.button--detail {
+  min-width: 120px;
+  min-height: 35px;
+  padding: 6px 18px;
+  border-radius: 4px;
+  background: #0db3c8;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.button--detail::after,
+.button--map::after {
+  content: "›";
+  margin-left: 8px;
+  font-size: 16px;
+}
+
+.access-inner {
+  display: grid;
+  grid-template-columns: 1fr 45%;
+}
+
+.access-content {
+  padding: 30px 25px;
+}
+
+.access-address {
+  margin: 17px 0 15px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+.access-info {
+  display: grid;
+  gap: 7px;
+}
+
+.access-info li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.access-info img {
+  width: 17px;
+  height: 17px;
+  object-fit: contain;
+}
+
+.access-info p {
+  margin: 0;
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.access-map {
+  margin: 25px 0;
+}
+
+.access-map > img {
+  display: block;
+  width: 90%;
+  height: 85%;
+  margin: 0 0 15px;
+  object-fit: cover;
+}
+
+.button--map {
+  right: 20px;
+  bottom: 18px;
+  min-width: 145px;
+  min-height: 36px;
+  padding: 6px 15px;
+  border-radius: 4px;
+  background: #0db3c8;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   FAQ
+========================= */
+
+.faq {
+  width: min(1140px, calc(100% - 40px));
+  margin: 40px auto 0;
+  padding: 30px 25px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 25px;
+  background: #edf8fc;
+}
+
+.faq > .section-title .section-title__ja {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.faq > .section-title .section-title__en {
+  color: #0db3c8;
+  font-size: 10px;
+}
+
+.accordion-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+}
+
+.accordion-group {
+  display: grid;
+  gap: 8px;
+}
+
+.accordion {
+  background: #fff;
+}
+
+.accordion__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 42px;
+  padding: 8px 14px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 11px;
+}
+
+.accordion__title::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__icon {
+  position: relative;
+  width: 14px;
+  height: 14px;
+  flex: 0 0 14px;
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 1px;
+  background: #0db3c8;
+  transform: translate(-50%, -50%);
+}
+
+.accordion__icon::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.accordion[open] .accordion__icon::after {
+  display: none;
+}
+
+.accordion__content {
+  padding: 0 14px 12px;
+  font-size: 10px;
+  line-height: 1.8;
+}
+
+
+/* =========================
+   Home Contact
+========================= */
+
+/*
+  `.contact` はお問い合わせページでも使われているため、
+  TOPページの `.hero` より後ろにある `.contact` だけを指定します。
+*/
+
+.hero ~ .contact {
+  width: min(1140px, calc(100% - 40px));
+  margin: 40px auto 35px;
+  padding: 20px 35px;
+  background: #f3f9fb;
+}
+
+.hero ~ .contact .contact-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.hero ~ .contact .contact-content {
+  flex: 1;
+}
+
+.hero ~ .contact .contact-content > .section-text {
+  margin-bottom: 12px;
+  font-family: serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.hero ~ .contact .contact-features {
+  display: flex;
+  gap: 25px;
+}
+
+.hero ~ .contact .contact-feature {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 0;
+}
+
+.hero ~ .contact .contact-feature__icon {
+  position: relative;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #0db3c8;
+}
+
+.hero ~ .contact .contact-feature__icon::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1;
+  transform: translate(-50%, -55%);
+}
+
+.hero ~ .contact .contact-feature__text {
+  color: #0db3c8;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.hero ~ .contact .contact-action {
+  position: relative;
+  width: 290px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.hero ~ .contact .contact-action img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero ~ .contact .button--contact {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(245, 157, 0, 0.94);
+  color: #fff;
+  font-family: serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.hero ~ .contact .button--contact::before {
+  content: "✉";
+  margin-right: 9px;
+}
+
+
+/* =========================================================
+   HOME / Tablet
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+  .main-visual {
+    height: 500px;
+  }
+
+  .main-visual-content {
+    width: calc(100% - 50px);
+  }
+
+  .main-visual-content h1 {
+    font-size: 40px;
+  }
+
+  .main-visual-text {
+    font-size: 12px;
+  }
+
+  .main-visual-subtitle {
+    font-size: 90px;
+  }
+
+  .real-estate-menu {
+    margin-top: -55px;
+  }
+
+  .real-estate-card {
+    min-height: 150px;
+  }
+
+  .real-estate-card-content {
+    padding: 15px;
+  }
+
+  .real-estate-card-content h2 {
+    font-size: 21px;
+  }
+
+  .area-inner {
+    gap: 25px;
+    padding: 20px 25px;
+  }
+
+  .reason-inner {
+    grid-template-columns: 140px 1fr;
+  }
+
+  .reason-item {
+    padding: 0 12px;
+  }
+
+  .about-access {
+    gap: 15px;
+  }
+
+  .about-content,
+  .access-content {
+    padding: 25px 20px;
+  }
+
+  .faq {
+    grid-template-columns: 140px 1fr;
+  }
+}
+
+
+/* =========================================================
+   HOME / Mobile
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+  /* Hero */
+
+  .main-visual {
+    height: 470px;
+  }
+
+  .main-visual-image {
+    object-position: 62% center;
+  }
+
+  .main-visual-content {
+    top: 43%;
+    width: calc(100% - 35px);
+  }
+
+  .main-visual-content h1 {
+    margin-bottom: 12px;
+    font-size: 29px;
+    line-height: 1.55;
+    letter-spacing: 0.05em;
+  }
+
+  .main-visual-text {
+    font-size: 10px;
+    line-height: 1.8;
+  }
+
+  .main-visual-text br {
+    display: none;
+  }
+
+  .main-visual-subtitle {
+    margin-top: 18px;
+    font-size: 48px;
+  }
+
+  .main-visual-subtitle span {
+    font-size: 8px;
+  }
+
+
+  /* Real Estate Menu */
+
+  .real-estate-menu {
+    margin-top: -45px;
+    padding: 0 12px;
+  }
+
+  .real-estate-menu-inner {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .real-estate-card {
+    min-height: 145px;
+    border-radius: 5px;
+  }
+
+  .real-estate-card-content {
+    padding: 13px;
+  }
+
+  .real-estate-card-content h2 {
+    margin-bottom: 5px;
+    font-size: 19px;
+  }
+
+  .real-estate-card-content h2::before {
+    width: 22px;
+    height: 22px;
+    margin-right: 6px;
+    vertical-align: -4px;
+  }
+
+  .real-estate-card-content .section-text {
+    font-size: 12px;
+  }
+
+  .real-estate-card .site-button {
+    right: 12px;
+    bottom: 10px;
+    left: 12px;
+    min-height: 28px;
+    font-size: 9px;
+  }
+
+
+  /* Area */
+
+  .area {
+    padding: 25px 12px 15px;
+  }
+
+  .area-inner {
+    display: block;
+    padding: 20px;
+  }
+
+  .area-heading {
+    margin-bottom: 12px;
+  }
+
+  .area-heading img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .area-heading .section-title__ja {
+    font-size: 20px;
+  }
+
+  .area-content .section-text {
+    font-size: 10px;
+  }
+
+  .area-list {
+    gap: 6px;
+  }
+
+  .area-list li {
+    padding: 2px 12px;
+    font-size: 10px;
+  }
+
+
+  /* Reason */
+
+  .reason {
+    padding: 25px 12px 35px;
+  }
+
+  .reason-inner {
+    display: block;
+  }
+
+  .reason-inner > .section-title {
+    margin-bottom: 20px;
+  }
+
+  .reason-inner .section-title__ja {
+    font-size: 21px;
+  }
+
+  .reason-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 0;
+  }
+
+  .reason-item {
+    min-height: auto;
+    padding: 0 12px;
+  }
+
+  .reason-item:nth-child(2) {
+    border-right: 1px dotted #0db3c8;
+  }
+
+  .reason-item:nth-child(3) {
+    border-left: none;
+  }
+
+  .reason-item img {
+    width: 42px;
+    height: 42px;
+  }
+
+  .reason-item h3 {
+    font-size: 11px;
+  }
+
+  .reason-item .section-text {
+    font-size: 9px;
+  }
+
+
+  /* About / Access */
+
+  .about-access {
+    width: calc(100% - 24px);
+    display: block;
+  }
+
+  .about {
+    margin-bottom: 12px;
+  }
+
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    padding: 22px 20px;
+  }
+
+  .about-content .section-title__ja,
+  .access-content .section-title__ja {
+    font-size: 21px;
+  }
+
+  .about-content .section-text {
+    font-size: 10px;
+  }
+
+  .about-image {
+    height: 190px;
+  }
+
+  .access-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .access-content {
+    padding: 22px 20px;
+  }
+
+  .access-map {
+    height: 220px;
+  }
+
+  .access-map > img {
+    min-height: 220px;
+  }
+
+  .button--map {
+    right: 15px;
+    bottom: 15px;
+  }
+
+
+  /* FAQ */
+
+  .faq {
+    width: calc(100% - 24px);
+    margin-top: 25px;
+    padding: 22px 15px;
+    display: block;
+  }
+
+  .faq > .section-title {
+    margin-bottom: 18px;
+  }
+
+  .faq > .section-title .section-title__ja {
+    font-size: 21px;
+  }
+
+  .accordion-section {
+    display: block;
+  }
+
+  .accordion-group + .accordion-group {
+    margin-top: 8px;
+  }
+
+  .accordion__title {
+    min-height: 40px;
+    padding: 7px 12px;
+    font-size: 10px;
+  }
+
+
+  /* Home Contact */
+
+  .hero ~ .contact {
+    width: calc(100% - 24px);
+    margin: 25px auto 25px;
+    padding: 20px 15px;
+  }
+
+  .hero ~ .contact .contact-inner {
+    display: block;
+  }
+
+  .hero ~ .contact .contact-content {
+    margin-bottom: 18px;
+  }
+
+  .hero ~ .contact .contact-content > .section-text {
+    font-size: 17px;
+    line-height: 1.6;
+  }
+
+  .hero ~ .contact .contact-features {
+    gap: 18px;
+  }
+
+  .hero ~ .contact .contact-action {
+    width: 100%;
+    height: 60px;
+  }
+
+  .hero ~ .contact .button--contact {
+    font-size: 15px;
+  }
+
+}
+
+/* =========================================================
+   SELL PAGE
+   売却の流れ
+========================================================= */
+
+.flow {
+  padding: 70px 20px 100px;
+  background: #fff;
+}
+
+.flow-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+
+/* =========================
+   Heading
+========================= */
+
+.flow-heading {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.flow-heading .section-title {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin: 0 0 25px;
+  color: #0db3c8;
+  font-family: serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.flow-heading .section-title::before,
+.flow-heading .section-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #0db3c8;
+}
+
+.flow-heading .section-title__ja {
+  white-space: nowrap;
+}
+
+.flow-lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+
+/* =========================
+   Flow Steps
+========================= */
+
+.flow-steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flow-step {
+  position: relative;
+  min-height: 255px;
+  padding: 22px 15px 20px;
+  background: #f1f9fb;
+  border: 1px solid #9edee8;
+  border-radius: 7px;
+}
+
+
+/* =========================
+   Number
+========================= */
+
+.flow-step__number {
+  position: absolute;
+  top: -23px;
+  left: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: #3da5c8;
+  color: #fff;
+  font-size: 14px;
+  line-height: 1;
+}
+
+
+/* =========================
+   Step Title
+========================= */
+
+.flow-step__title {
+  min-height: 42px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+/* =========================
+   Icon
+========================= */
+
+.flow-step__icon {
+  height: 100px;
+  margin: 12px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flow-step__icon img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+
+/* =========================
+   Step Text
+========================= */
+
+.flow-step__text {
+  margin: 0;
+  font-size: 12px;
+  line-height: 2.1;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.flow-cta {
+  max-width: 710px;
+  margin: 80px auto 0;
+  padding: 30px 35px;
+
+  display: flex;
+  align-items: center;
+  gap: 45px;
+
+  background: #f1f9fb;
+  border-radius: 5px;
+}
+
+.flow-cta__text {
+  flex: 1;
+}
+
+.flow-cta__text h2 {
+  margin: 0 0 10px;
+  padding-bottom: 8px;
+
+  border-bottom: 1px solid #d5dfe1;
+
+  color: #0db3c8;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.flow-cta__text p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.flow-cta .button--cta {
+  width: 310px;
+  min-height: 78px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+
+  background: #f5a000;
+  color: #fff;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+
+  transition: opacity 0.2s ease;
+}
+
+.flow-cta .button--cta:hover {
+  opacity: 0.8;
+}
+
+.flow-cta .button-arrow {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   SELL PAGE / Tablet
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+
+  .flow {
+    padding: 60px 20px 80px;
+  }
+
+  .flow-inner {
+    max-width: 900px;
+  }
+
+  .flow-steps {
+    gap: 10px;
+  }
+
+  .flow-step {
+    min-height: 250px;
+    padding: 22px 10px 18px;
+  }
+
+  .flow-step__title {
+    font-size: 13px;
+  }
+
+  .flow-step__text {
+    font-size: 11px;
+  }
+
+  .flow-cta {
+    gap: 25px;
+  }
+
+  .flow-cta .button--cta {
+    width: 280px;
+  }
+}
+
+
+/* =========================================================
+   SELL PAGE / Mobile
+========================================================= */
+
+@media screen and (max-width: 767px) {
+
+  .flow {
+    padding: 50px 15px 70px;
+  }
+
+  .flow-heading {
+    margin-bottom: 45px;
+  }
+
+  .flow-heading .section-title {
+    gap: 12px;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  .flow-lead {
+    font-size: 12px;
+  }
+
+
+  /* Steps */
+
+  .flow-steps {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .flow-step {
+    min-height: auto;
+    padding: 25px 20px 25px;
+  }
+
+  .flow-step__number {
+    top: -18px;
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+
+  .flow-step__title {
+    min-height: auto;
+    font-size: 15px;
+  }
+
+  .flow-step__icon {
+    height: 90px;
+    margin: 12px 0;
+  }
+
+  .flow-step__icon img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .flow-step__text {
+    font-size: 12px;
+    line-height: 2;
+  }
+
+
+  /* CTA */
+
+  .flow-cta {
+    margin-top: 55px;
+    padding: 25px 20px;
+    display: block;
+  }
+
+  .flow-cta__text h2 {
+    font-size: 18px;
+  }
+
+  .flow-cta__text p {
+    font-size: 12px;
+  }
+
+  .flow-cta .button--cta {
+    width: 100%;
+    min-height: 60px;
+    margin-top: 20px;
+    font-size: 16px;
+  }
+
+} 

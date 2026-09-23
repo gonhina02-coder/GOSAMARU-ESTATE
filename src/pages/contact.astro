@@ -5,10 +5,12 @@ import PageVisual from '../components/PageVisual.astro';
 
 const title = 'お問い合わせ｜護佐丸エステート';
 const description = '護佐丸エステートへのお問い合わせはこちら。不動産の購入・売却・賃貸・管理についてお気軽にご相談ください。';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title} description={description} canonical="https://www.gosamaru-estate.com/contact/">
-  <PageVisual src="/images/img/contact-mainvisual.png" alt="沖縄の風景" />
+  <PageVisual src={`${base}images/img/contact-mainvisual.jpg`} alt="沖縄の風景" />
 
   <section class="contact contact-page">
     <div class="contact-inner">
@@ -42,19 +44,38 @@ const description = '護佐丸エステートへのお問い合わせはこち�
         </div>
 
         <fieldset class="form-group form-group--fieldset">
-          <legend class="form-label"><span class="form-label__text">お問合せ種別</span><span class="form-required">必須</span></legend>
+          <div class="form-label">
+            <span class="form-label__text">お問合せ種別</span>
+            <span class="form-required">必須</span>
+          </div>
+
           <div class="form-field form-field--choice">
             {['買いたい', '売りたい', '借りたい', '貸したい', 'その他'].map((value) => (
-              <label class="form-choice"><input type="checkbox" name="type[]" value={value} /><span>{value}</span></label>
+              <label class="form-choice">
+                <input type="checkbox" name="type[]" value={value} />
+                <span>{value}</span>
+              </label>
             ))}
           </div>
         </fieldset>
 
         <fieldset class="form-group form-group--fieldset">
-          <legend class="form-label"><span class="form-label__text">ご希望の連絡方法</span><span class="form-required">必須</span></legend>
+          <div class="form-label">
+            <span class="form-label__text">ご希望の連絡方法</span>
+            <span class="form-required">必須</span>
+          </div>
+
           <div class="form-field form-field--choice">
             {['電話', 'メール', 'どちらでも可'].map((value, index) => (
-              <label class="form-choice"><input type="radio" name="contact_method" value={value} required={index === 0} /><span>{value}</span></label>
+              <label class="form-choice">
+                <input
+                  type="radio"
+                  name="contact_method"
+                  value={value}
+                  required={index === 0}
+                />
+                <span>{value}</span>
+              </label>
             ))}
           </div>
         </fieldset>
@@ -69,7 +90,6 @@ const description = '護佐丸エステートへのお問い合わせはこち�
         <div class="form-submit">
           <button type="submit" class="button button--submit">
             <span>入力内容を送信する</span>
-            <span class="button-arrow" aria-hidden="true">→</span>
           </button>
         </div>
       </form>

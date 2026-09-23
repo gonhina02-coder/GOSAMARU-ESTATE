@@ -1,5 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout
@@ -8,26 +10,21 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 >
 
   <!-- =========================
-       Page Visual
+       Company Heading
   ========================== -->
-  <section class="company-visual">
-    <div class="company-visual__image">
-      <img
-        src="/images/company-visual.jpg"
-        alt="沖縄の海と古民家"
-      />
-    </div>
+  <section class="company-heading-area">
+    <div class="company-heading-area__inner">
 
-    <div class="company-visual__content">
       <h1>
-        <span class="company-visual__title">会社概要</span>
-        <span class="company-visual__en">COMPANY</span>
+        <span class="company-heading-area__title">会社概要</span>
+        <span class="company-heading-area__line"></span>
       </h1>
 
       <p>
         護佐丸エステートの想いと、<br />
         地域とともに歩む私たちの取り組みをご紹介します。
       </p>
+
     </div>
   </section>
 
@@ -85,9 +82,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
       </div>
 
+
       <div class="company-message__image">
         <img
-          src="/images/representative.jpg"
+          src={`${base}images/img/representative.png`}
           alt="代表取締役 新垣 渉"
         />
       </div>
@@ -119,7 +117,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <div class="philosophy-item__icon">
             <img
-              src="/images/icon-trust.svg"
+              src={`${base}images/icon/ico-shine.svg`}
               alt=""
             />
           </div>
@@ -128,8 +126,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>信頼</h3>
 
             <p>
-              お客様との信頼関係を何より大切にし、
-              誠実な対応をお約束します。
+              お客様との信頼関係を何より
+              大切にし、誠実な対応を
+              お約束します。
             </p>
           </div>
 
@@ -141,7 +140,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <div class="philosophy-item__icon">
             <img
-              src="/images/icon-value.svg"
+              src={`${base}images/icon/ico-home_02.svg`}
               alt=""
             />
           </div>
@@ -151,7 +150,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
             <p>
               不動産の価値を最大限に引き出し、
-              お客様の資産価値向上に貢献します。
+              お客様の資産価値向上に
+              貢献します。
             </p>
           </div>
 
@@ -163,7 +163,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
           <div class="philosophy-item__icon">
             <img
-              src="/images/icon-community.svg"
+              src={`${base}images/icon/ico-team.svg`}
               alt=""
             />
           </div>
@@ -172,8 +172,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
             <h3>地域貢献</h3>
 
             <p>
-              地域の発展と暮らしの向上に貢献し、
-              沖縄の未来を共に創っていきます。
+              地域の発展と暮らしの向上に
+              貢献し、沖縄の未来を共に
+              創っていきます。
             </p>
           </div>
 
@@ -194,7 +195,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <div class="company-contact__inner">
 
       <div class="company-contact__icon">
-        <span>✉</span>
+        <img src={`${base}images/icon/ico-mail_02.svg`}>
       </div>
 
       <p>
@@ -202,8 +203,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         お気軽にお問い合わせください。
       </p>
 
-      <a href="/contact/" class="company-contact__button">
-        <span>✉</span>
+      <a
+        href={`${base}contact/`}
+        class="company-contact__button"
+      >
         お問い合わせはこちら
       </a>
 

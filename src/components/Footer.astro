@@ -1,19 +1,22 @@
 ---
+const base = import.meta.env.BASE_URL;
+
 const navItems = [
-  { label: '買う', href: '/buy/' },
-  { label: '売る', href: '/sell/' },
-  { label: '借りる', href: '/rent/' },
-  { label: '貸す', href: '/lease/' },
-  { label: '会社概要', href: '/company/' },
-  { label: 'お問い合わせ', href: '/contact/' }
+  { label: '買う', href: 'https://www.e-uchina.net/fudosan_kaisha/7123' },
+  { label: '売る', href: `${base}sell/` },
+  { label: '借りる', href: 'https://www.e-uchina.net/fudosan_kaisha/7123' },
+  { label: '貸す', href: `${base}lease/` },
+  { label: '会社概要', href: `${base}company/` },
+  { label: 'お問い合わせ', href: `${base}contact/` }
 ];
 ---
 
 <footer class="footer">
   <div class="footer-inner">
+
     <div class="footer-info">
-      <a href="/" class="footer-logo">
-        <img src="/images/logo.png" alt="GOSAMARU ESTATE" />
+      <a href={base} class="footer-logo logo">
+        <!-- <img src={`${base}images/logo.png`} alt="GOSAMARU ESTATE" /> -->
       </a>
 
       <address class="footer-address">
@@ -24,14 +27,27 @@ const navItems = [
 
     <div class="footer-right">
       <nav class="footer-nav" aria-label="フッターナビゲーション">
-        {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+        {navItems.map((item) => {
+          const isExternal = item.href.startsWith('http');
+
+          return (
+            <a
+              href={item.href}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+            >
+              {item.label}
+            </a>
+          );
+        })}
       </nav>
 
       <p class="copyright">© GOSAMARU ESTATE All Right Reserved.</p>
     </div>
 
-    <a href="#" class="page-top" aria-label="ページトップへ戻る">
+    <a href={base} class="page-top" aria-label="ページトップへ戻る">
       <span></span>
     </a>
+
   </div>
 </footer>

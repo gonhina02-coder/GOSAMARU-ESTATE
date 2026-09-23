@@ -4,12 +4,13 @@ import SectionTitle from '../components/SectionTitle.astro';
 
 const title = '沖縄の不動産なら護佐丸エステート｜売買・賃貸を地域密着でサポート';
 const description = '沖縄の不動産売買・賃貸なら護佐丸エステート。地域に密着した不動産会社として、物件探しから購入・売却・賃貸まで安心してサポートいたします。';
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout title={title} description={description} canonical="https://www.gosamaru-estate.com/">
   <section class="hero">
     <div class="main-visual">
-      <img src="/images/img/home-mainvisual.png" alt="沖縄の海と青空" class="main-visual-image" />
+      <img src={`${base}images/img/home-mainvisual.png`} alt="沖縄の海と青空" class="main-visual-image" />
       <div class="main-visual-content">
         <h1>
           沖縄の未来と暮らしを、<br />
@@ -29,22 +30,62 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
     <div class="real-estate-menu">
       <div class="real-estate-menu-inner">
         {[
-          ['買う', 'home-buy.jpg', '戸建て・マンション', '土地を探す'],
-          ['借りる', 'home-rent.jpg', '賃貸物件を', '探す'],
-          ['売る', 'home-sell.jpg', '不動産売却を', 'ご検討の方へ'],
-          ['貸す', 'home-lease.jpg', '不動産を貸したい', 'オーナー様へ']
-        ].map(([label, image, line1, line2], index) => (
+          {
+            label: '買う',
+            image: 'home-buy.jpg',
+            line1: '戸建て・マンション',
+            line2: '土地を探す',
+            href: 'https://www.e-uchina.net/fudosan_kaisha/7123',
+            external: true
+          },
+          {
+            label: '借りる',
+            image: 'home-rent.jpg',
+            line1: '賃貸物件を',
+            line2: '探す',
+            href: 'https://www.e-uchina.net/fudosan_kaisha/7123',
+            external: true
+          },
+          {
+            label: '売る',
+            image: 'home-sell.jpg',
+            line1: '不動産売却を',
+            line2: 'ご検討の方へ',
+            href: `${base}sell/`,
+            external: false
+          },
+          {
+            label: '貸す',
+            image: 'home-lease.jpg',
+            line1: '不動産を貸したい',
+            line2: 'オーナー様へ',
+            href: `${base}lease/`,
+            external: false
+          }
+        ].map((item) => (
           <div class="real-estate-card">
-            <img src={`/images/img/${image}`} alt={`不動産を${label}`} />
+            <img
+              src={`${base}images/img/${item.image}`}
+              alt={`不動産を${item.label}`}
+            />
+
             <div class="real-estate-card-overlay"></div>
+
             <div class="real-estate-card-content">
-              <h2>{label}</h2>
+              <h2>{item.label}</h2>
+
               <p class="section-text">
-                {line1}<br />{line2}
+                {item.line1}<br />{item.line2}
               </p>
             </div>
-            <a href={index === 0 || index === 1 ? '#' : '#'} class="site-button">
-              {index === 0 || index === 1 ? 'うちなーらいふへ' : '詳しく見る'}
+
+            <a
+              href={item.href}
+              class="site-button"
+              target={item.external ? '_blank' : undefined}
+              rel={item.external ? 'noopener noreferrer' : undefined}
+            >
+              {item.external ? 'うちなーらいふへ' : '詳しく見る'}
             </a>
           </div>
         ))}
@@ -55,7 +96,7 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
   <section class="area">
     <div class="area-inner">
       <div class="area-heading">
-        <img src="/images/icon/ico-area.svg" alt="" />
+        <img src={`${base}images/icon/ico-area.svg`} alt="" />
         <SectionTitle ja="対応エリア" en="AREA" />
       </div>
       <div class="area-content">
@@ -78,22 +119,25 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
       <SectionTitle ja="選ばれる理由" en="REASON" />
       <div class="reason-list">
         <div class="reason-item">
-          <img src="/images/icon/ico-area.svg" alt="" />
+          <img src={`${base}images/icon/ico-location.svg`} alt="" />
           <h3>地域密着の情報力</h3>
           <p class="section-text">本島中部エリアを中心に<br />地域情報に精通、最新の<br />物件情報をお届けします。</p>
         </div>
+
         <div class="reason-item">
-          <img src="/images/icon/ico-consultation.svg" alt="" />
+          <img src={`${base}images/icon/ico-consultation.svg`} alt="" />
           <h3>丁寧なヒアリング</h3>
           <p class="section-text">お客様のご要望やライフスタイルに<br />寄り添い、丁寧なご対応を<br />いたします。</p>
         </div>
+
         <div class="reason-item">
-          <img src="/images/icon/ico-certificate.svg" alt="" />
+          <img src={`${base}images/icon/ico-certificate.svg`} alt="" />
           <h3>わかりやすい説明</h3>
           <p class="section-text">専門用語にを使わず、契約内容や<br />手続きについて丁寧に<br />ご説明します。</p>
         </div>
+
         <div class="reason-item">
-          <img src="/images/icon/ico-support-care.svg" alt="" />
+          <img src={`${base}images/icon/ico-support-care.svg`} alt="" />
           <h3>購入後もサポート</h3>
           <p class="section-text">ご契約後も安心していただける<br />アフターフォローまで<br />しっかりと対応いたします。</p>
         </div>
@@ -113,9 +157,10 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
             お客様の大切な資産を安心して任せていただける<br />
             パートナーとして誠実な対応をお約束します。
           </p>
-          <a href="/company/" class="button button--detail">詳しく見る</a>
+          <a href={`${base}company/`} class="button button--detail">詳しく見る</a>
         </div>
-        <img src="/images/img/home-about.jpg" alt="護佐丸エステート" class="about-image" />
+
+        <img src={`${base}images/img/home-about.png`} alt="護佐丸エステート" class="about-image" />
       </div>
     </div>
 
@@ -123,19 +168,37 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
       <div class="access-inner">
         <div class="access-content">
           <SectionTitle ja="アクセス" en="ACCESS" />
+
           <ul class="access-address">
             <li>〒904-0003</li>
             <li>沖縄市住吉1-2-19 101号</li>
           </ul>
+
           <ul class="access-info">
-            <li><img src="/images/icon/ico-tel.svg" alt="" /><p>098-955-1751</p></li>
-            <li><img src="/images/icon/ico-mail.svg" alt="" /><p>gosamaruestate@gmail.com</p></li>
-            <li><img src="/images/icon/ico-clock.svg" alt="" /><p>営業時間 9:00-18:00</p></li>
-            <li><img src="/images/icon/ico-calendar.svg" alt="" /><p>定休日 土・日曜日</p></li>
+            <li>
+              <img src={`${base}images/icon/ico-tel.svg`} alt="" />
+              <p>098-955-1751</p>
+            </li>
+
+            <li>
+              <img src={`${base}images/icon/ico-mailbox.svg`} alt="" />
+              <p>gosamaruestate@gmail.com</p>
+            </li>
+
+            <li>
+              <img src={`${base}images/icon/ico-clock.svg`} alt="" />
+              <p>営業時間 9:00-18:00</p>
+            </li>
+
+            <li>
+              <img src={`${base}images/icon/ico-calendar.svg`} alt="" />
+              <p>定休日 土・日曜日</p>
+            </li>
           </ul>
         </div>
+
         <div class="access-map">
-          <img src="/images/img/home-map.jpg" alt="護佐丸エステート周辺地図" />
+          <img src={`${base}images/img/home-map.png`} alt="護佐丸エステート周辺地図" />
           <a href="#" class="button button--map">Googleマップで見る</a>
         </div>
       </div>
@@ -144,26 +207,60 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
 
   <section class="faq">
     <SectionTitle ja="よくあるご質問" en="FAQ" />
+
     <div class="accordion-section">
       <div class="accordion-group">
-        {['相談や査定は無料ですか？', '住宅ローンの相談も可能ですか？', '売却をお願いした場合、どのくらいで売れますか？'].map((question) => (
+        {[
+          {
+            question: '相談や査定は無料ですか？',
+            answer: 'ご相談・査定は無料です。まずはお気軽にお問い合わせください。'
+          },
+          {
+            question: '住宅ローンの相談も可能ですか？',
+            answer: 'はい、住宅ローンについてもご相談いただけます。お客様の状況に合わせてご案内いたします。'
+          },
+          {
+            question: '売却をお願いした場合、どのくらいで売れますか？',
+            answer: '物件の種類や価格、立地、市場の状況などによって異なります。まずは物件の状況をお聞かせください。'
+          }
+        ].map((item) => (
           <details class="accordion">
             <summary class="accordion__title">
-              <span class="accordion__text">{question}</span>
+              <span class="accordion__text">{item.question}</span>
               <span class="accordion__icon" aria-hidden="true"></span>
             </summary>
-            <div class="accordion__content"></div>
+
+            <div class="accordion__content">
+              <p>{item.answer}</p>
+            </div>
           </details>
         ))}
       </div>
+
       <div class="accordion-group">
-        {['物件の見学はできますか？', '賃貸物件も紹介してもらえますか？', '遠方に住んでいますが、相談できますか？'].map((question) => (
+        {[
+          {
+            question: '物件の見学はできますか？',
+            answer: 'はい、物件の見学が可能です。ご希望の物件や日時について、お気軽にご相談ください。'
+          },
+          {
+            question: '賃貸物件も紹介してもらえますか？',
+            answer: 'はい、賃貸物件についてもご紹介しております。ご希望の条件をお聞かせください。'
+          },
+          {
+            question: '遠方に住んでいますが、相談できますか？',
+            answer: 'はい、遠方にお住まいの方からのご相談も承っております。まずはお気軽にお問い合わせください。'
+          }
+        ].map((item) => (
           <details class="accordion">
             <summary class="accordion__title">
-              <span class="accordion__text">{question}</span>
+              <span class="accordion__text">{item.question}</span>
               <span class="accordion__icon" aria-hidden="true"></span>
             </summary>
-            <div class="accordion__content"></div>
+
+            <div class="accordion__content">
+              <p>{item.answer}</p>
+            </div>
           </details>
         ))}
       </div>
@@ -174,14 +271,23 @@ const description = '沖縄の不動産売買・賃貸なら護佐丸エステ�
     <div class="contact-inner">
       <div class="contact-content">
         <p class="section-text">不動産に関するご相談・お問い合せはこちら</p>
+
         <div class="contact-features">
-          <p class="contact-feature"><span class="contact-feature__icon"></span><span class="contact-feature__text">秘密厳守</span></p>
-          <p class="contact-feature"><span class="contact-feature__icon"></span><span class="contact-feature__text">迅速対応</span></p>
+          <p class="contact-feature">
+            <span class="contact-feature__icon"></span>
+            <span class="contact-feature__text">秘密厳守</span>
+          </p>
+
+          <p class="contact-feature">
+            <span class="contact-feature__icon"></span>
+            <span class="contact-feature__text">迅速対応</span>
+          </p>
         </div>
       </div>
+
       <div class="contact-action">
-        <img src="/images/img/home-contact.jpg" alt="お問い合わせ" />
-        <a href="/contact/" class="button button--contact">お問い合わせはこちら</a>
+        <!-- <img src={`${base}images/img/home-contact.jpg`} alt="お問い合わせ" /> -->
+        <a href={`${base}contact/`} class="button button--contact">お問い合わせはこちら</a>
       </div>
     </div>
   </section>
