@@ -10,7 +10,7 @@ const base = import.meta.env.BASE_URL;
 <BaseLayout title={title} description={description} canonical="https://www.gosamaru-estate.com/">
   <section class="hero">
     <div class="main-visual">
-      <img src={`${base}images/img/home-mainvisual.png`} alt="沖縄の海と青空" class="main-visual-image" />
+      <img src={`${base}/images/img/home-mainvisual.png`} alt="沖縄の海と青空" class="main-visual-image" />
       <div class="main-visual-content">
         <h1>
           沖縄の未来と暮らしを、<br />
@@ -65,7 +65,7 @@ const base = import.meta.env.BASE_URL;
         ].map((item) => (
           <div class="real-estate-card">
             <img
-              src={`${base}images/img/${item.image}`}
+              src={`${base}/images/img/${item.image}`}
               alt={`不動産を${item.label}`}
             />
 
@@ -96,7 +96,7 @@ const base = import.meta.env.BASE_URL;
   <section class="area">
     <div class="area-inner">
       <div class="area-heading">
-        <img src={`${base}images/icon/ico-area.svg`} alt="" />
+        <img src={`${base}/images/icon/ico-area.svg`} alt="" />
         <SectionTitle ja="対応エリア" en="AREA" />
       </div>
       <div class="area-content">
@@ -119,25 +119,25 @@ const base = import.meta.env.BASE_URL;
       <SectionTitle ja="選ばれる理由" en="REASON" />
       <div class="reason-list">
         <div class="reason-item">
-          <img src={`${base}images/icon/ico-location.svg`} alt="" />
+          <img src={`${base}/images/icon/ico-location.svg`} alt="" />
           <h3>地域密着の情報力</h3>
           <p class="section-text">本島中部エリアを中心に<br />地域情報に精通、最新の<br />物件情報をお届けします。</p>
         </div>
 
         <div class="reason-item">
-          <img src={`${base}images/icon/ico-consultation.svg`} alt="" />
+          <img src={`${base}/images/icon/ico-consultation.svg`} alt="" />
           <h3>丁寧なヒアリング</h3>
           <p class="section-text">お客様のご要望やライフスタイルに<br />寄り添い、丁寧なご対応を<br />いたします。</p>
         </div>
 
         <div class="reason-item">
-          <img src={`${base}images/icon/ico-certificate.svg`} alt="" />
+          <img src={`${base}/images/icon/ico-certificate.svg`} alt="" />
           <h3>わかりやすい説明</h3>
           <p class="section-text">専門用語にを使わず、契約内容や<br />手続きについて丁寧に<br />ご説明します。</p>
         </div>
 
         <div class="reason-item">
-          <img src={`${base}images/icon/ico-support-care.svg`} alt="" />
+          <img src={`${base}/images/icon/ico-support-care.svg`} alt="" />
           <h3>購入後もサポート</h3>
           <p class="section-text">ご契約後も安心していただける<br />アフターフォローまで<br />しっかりと対応いたします。</p>
         </div>
@@ -160,7 +160,7 @@ const base = import.meta.env.BASE_URL;
           <a href={`${base}company/`} class="button button--detail">詳しく見る</a>
         </div>
 
-        <img src={`${base}images/img/home-about.png`} alt="護佐丸エステート" class="about-image" />
+        <img src={`${base}/images/img/home-about.png`} alt="護佐丸エステート" class="about-image" />
       </div>
     </div>
 
@@ -176,29 +176,29 @@ const base = import.meta.env.BASE_URL;
 
           <ul class="access-info">
             <li>
-              <img src={`${base}images/icon/ico-tel.svg`} alt="" />
+              <img src={`${base}/images/icon/ico-tel.svg`} alt="" />
               <p>098-955-1751</p>
             </li>
 
             <li>
-              <img src={`${base}images/icon/ico-mailbox.svg`} alt="" />
+              <img src={`${base}/images/icon/ico-mailbox.svg`} alt="" />
               <p>gosamaruestate@gmail.com</p>
             </li>
 
             <li>
-              <img src={`${base}images/icon/ico-clock.svg`} alt="" />
+              <img src={`${base}/images/icon/ico-clock.svg`} alt="" />
               <p>営業時間 9:00-18:00</p>
             </li>
 
             <li>
-              <img src={`${base}images/icon/ico-calendar.svg`} alt="" />
+              <img src={`${base}/images/icon/ico-calendar.svg`} alt="" />
               <p>定休日 土・日曜日</p>
             </li>
           </ul>
         </div>
 
         <div class="access-map">
-          <img src={`${base}images/img/home-map.png`} alt="護佐丸エステート周辺地図" />
+          <img src={`${base}/images/img/home-map.png`} alt="護佐丸エステート周辺地図" />
           <a href="#" class="button button--map">Googleマップで見る</a>
         </div>
       </div>
@@ -286,7 +286,7 @@ const base = import.meta.env.BASE_URL;
       </div>
 
       <div class="contact-action">
-        <!-- <img src={`${base}images/img/home-contact.jpg`} alt="お問い合わせ" /> -->
+        <!-- <img src={`${base}/images/img/home-contact.jpg`} alt="お問い合わせ" /> -->
         <a href={`${base}contact/`} class="button button--contact">お問い合わせはこちら</a>
       </div>
     </div>
