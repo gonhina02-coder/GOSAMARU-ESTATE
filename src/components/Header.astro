@@ -16,8 +16,15 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
 <header class="header">
   <div class="header-inner">
 
-    <a href={base} class="logo">護佐丸エステート</a>
+    <!-- ロゴ -->
+    <a href={base} class="header-logo">
+      <img
+        src={`${base}/images/img/logo.png`}
+        alt="GOSAMARU ESTATE"
+      />
+    </a>
 
+    <!-- PC・タブレット用ナビ -->
     <nav class="nav" aria-label="メインナビゲーション">
       <ul class="nav-list">
         {navItems.map((item) => {
@@ -25,7 +32,6 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
           const itemPath = isExternal
             ? ''
             : item.href.replace(/\/$/, '');
-
           const isCurrent = !isExternal && currentPath === itemPath;
 
           return (
@@ -44,19 +50,80 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       </ul>
     </nav>
 
+    <!-- 電話・お問い合わせ -->
     <div class="header-contact">
-
       <a href="tel:098-943-2035" class="header-tel">
         <span class="tel-number">098-955-1751</span>
         <span class="tel-hours">受付時間 9:00-18:00 / 土・日曜定休</span>
       </a>
 
-      <a href={`${base}contact/`} class="header-mail">
+      <a href={`${base}/contact/`} class="header-mail">
         <img src={`${base}/images/icon/ico-mail.svg`} alt="" />
         <span>お問い合わせ</span>
       </a>
-
     </div>
 
+    <!-- ハンバーガーボタン -->
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="メニューを開く"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
   </div>
+
+  <!-- モバイルメニュー -->
+  <nav
+    id="mobile-menu"
+    class="mobile-menu"
+    aria-label="モバイルナビゲーション"
+  >
+    <ul class="mobile-menu-list">
+      {navItems.map((item) => {
+        const isExternal = item.href.startsWith('http');
+        const itemPath = isExternal
+          ? ''
+          : item.href.replace(/\/$/, '');
+        const isCurrent = !isExternal && currentPath === itemPath;
+
+        return (
+          <li>
+            <a
+              href={item.href}
+              aria-current={isCurrent ? 'page' : undefined}
+              target={isExternal ? '_blank' : undefined}
+              rel={isExternal ? 'noopener noreferrer' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </nav>
 </header>
+
+<script>
+  const menuButton = document.querySelector('.menu-button');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  if (menuButton && mobileMenu) {
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute(
+        'aria-label',
+        isOpen ? 'メニューを開く' : 'メニューを閉じる'
+      );
+
+      mobileMenu.classList.toggle('is-open', !isOpen);
+    });
+  }
+</script>

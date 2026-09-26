@@ -85,22 +85,14 @@ textarea {
   max-width: 1200px;
   min-height: 90px;
   margin: 0 auto;
-  padding: 15px 20px;
+  padding: 0 20px;
   display: flex;
   align-items: center;
   gap: 45px;
 }
 
-.logo {
-  width: 210px;
-  min-width: 210px;
-  height: 55px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #ddd;
-  text-decoration: none;
-  color: transparent;
+.header-logo {
+  width: 30%;
 }
 
 .nav {
@@ -167,6 +159,123 @@ textarea {
   height: 20px;
 }
 
+/* ========================================
+   ハンバーガーメニュー
+======================================== */
+
+.menu-button {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+
+/* ========================================
+   1024px以下
+======================================== */
+
+@media screen and (max-width: 1024px) {
+
+  .header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+  }
+
+  .header-logo {
+  width: 40%;
+  }
+
+  /* PCナビを非表示 */
+  .nav {
+    display: none;
+  }
+
+  /* 電話・お問い合わせを非表示 */
+  .header-contact {
+    display: none;
+  }
+
+  /* ハンバーガーボタン */
+  .menu-button {
+    display: flex;
+    margin-left: auto;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
+  .menu-button span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #0db3c8;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  /* メニュー */
+  .mobile-menu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    background: #fff;
+    transition: max-height 0.3s ease;
+  }
+
+  .mobile-menu.is-open {
+    max-height: 500px;
+  }
+
+  .mobile-menu-list {
+    margin: 0;
+    padding: 10px 20px 20px;
+    list-style: none;
+  }
+
+  .mobile-menu-list li {
+    border-bottom: 1px solid #e5eef1;
+  }
+
+  .mobile-menu-list a {
+    display: block;
+    padding: 15px 10px;
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .mobile-menu-list a:hover {
+    color: #0db3c8;
+  }
+
+  /* 開いたときに「×」にする */
+  .menu-button[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+
+  .menu-button[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-button[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+
+  
+}
+
 /* =========================
    Page Visual
 ========================= */
@@ -210,13 +319,11 @@ textarea {
 
 .footer-logo {
   display: block;
-  width: 188px;
-  height: 51px;
+  height: 90px;
 }
 
 .footer-logo img {
   display: block;
-  width: 100%;
   height: 100%;
   object-fit: contain;
 }
@@ -721,15 +828,11 @@ textarea {
 
 .philosophy .section-heading h2::after {
   content: "";
-
   position: absolute;
   left: 50%;
   bottom: 0;
-
   width: 32px;
   height: 2px;
-
-  background: #00a9cf;
   transform: translateX(-50%);
 }
 
@@ -1407,6 +1510,16 @@ textarea {
   font-size: 18px;
 }
 
+/* =========================================================
+   Rent PAGE / Tablet
+========================================================= */
+
+@media screen and (max-width: 1024px) {
+  .rent-flow-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px 10px;
+  }
+}
 
 /* =========================
    Rent Flow Mobile
@@ -1638,13 +1751,11 @@ textarea {
 @media screen and (max-width: 767px) {
   .header-inner {
     min-height: auto;
-    flex-wrap: wrap;
     gap: 15px;
   }
 
-  .logo {
-    width: 160px;
-    min-width: 160px;
+  .header-logo {
+    width: 65%;
   }
 
   .nav {
@@ -1725,7 +1836,8 @@ textarea {
   }
 
   .footer-info {
-    display: block;
+    align-items: flex-end;
+    margin: 0 0 10px;
   }
 
   .footer-logo {
@@ -1746,6 +1858,9 @@ textarea {
     flex-wrap: wrap;
     gap: 12px 20px;
     padding-right: 40px;
+  }
+  .page-visual {
+    display: none;
   }
 }
 /* =========================================================
@@ -2224,7 +2339,7 @@ textarea {
 .access-map > img {
   display: block;
   width: 90%;
-  height: 85%;
+  height: 75%;
   margin: 0 0 15px;
   object-fit: cover;
 }
@@ -2252,7 +2367,7 @@ textarea {
   margin: 40px auto 0;
   padding: 30px 25px;
   display: grid;
-  grid-template-columns: 160px 1fr;
+  grid-template-columns: 180px 1fr;
   gap: 25px;
   background: #edf8fc;
 }
@@ -2520,7 +2635,7 @@ textarea {
   }
 
   .main-visual-image {
-    object-position: 62% center;
+    object-position: 82% center;
   }
 
   .main-visual-content {
@@ -2546,11 +2661,12 @@ textarea {
 
   .main-visual-subtitle {
     margin-top: 18px;
-    font-size: 48px;
+    font-size: 60px;
   }
 
   .main-visual-subtitle span {
-    font-size: 8px;
+    font-size: 20px;
+    display: block;
   }
 
 
@@ -2670,9 +2786,9 @@ textarea {
     border-right: 1px dotted #0db3c8;
   }
 
-  .reason-item:nth-child(3) {
+  /* .reason-item:nth-child(3) {
     border-left: none;
-  }
+  } */
 
   .reason-item img {
     width: 42px;
@@ -2718,6 +2834,7 @@ textarea {
 
   .about-image {
     height: 190px;
+    margin: 0 auto 20px;
   }
 
   .access-inner {
@@ -2729,11 +2846,11 @@ textarea {
   }
 
   .access-map {
-    height: 220px;
+    margin: 0 auto 20px;
   }
 
   .access-map > img {
-    min-height: 220px;
+    margin: 0 auto 20px;
   }
 
   .button--map {
@@ -3041,7 +3158,8 @@ textarea {
   }
 
   .flow-steps {
-    gap: 10px;
+    gap: 50px 10px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .flow-step {
